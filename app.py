@@ -5,7 +5,7 @@ app = Flask(__name__)
 app.config['APPINSIGHTS_INSTRUMENTATIONKEY'] = '413d7290-841f-4f30-96ac-9353c368cef1'
 appinsights = AppInsights(app)
 
-app.run(host = "10.100.100.10", port = 8080)
+
 
 @app.route('/')
 def hello_world():
@@ -14,4 +14,6 @@ def hello_world():
     #app.logger.error('Error Entry')
     return 'Hello, World!'
 
+
+app.run(host = "10.100.100.10", port = 8080)
     
