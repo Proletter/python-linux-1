@@ -1,4 +1,4 @@
-import xgboost as xgb
+# import xgboost as xgb
 from flask import Flask
 from applicationinsights.flask.ext import AppInsights
 app = Flask(__name__)
@@ -13,5 +13,6 @@ def hello_world():
     return 'Hello, World!'
 
 
-app.run(host = "10.100.100.10", port = 8080)
+if __name__ == '__main__':
+    app.run()
     
